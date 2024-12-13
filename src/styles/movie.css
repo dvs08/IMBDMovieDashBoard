@@ -1,0 +1,446 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* all: unset; */
+}
+
+/*Backdrop*/
+
+.hero {
+    display: flex;
+    height: 80vh; 
+    position: relative;
+    color: #999;
+    background-color: #000;
+}
+
+.backdrop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem; /* Add some padding for spacing */
+    color: white; /* Text color */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.image {
+    width: 50%; /* Adjust width as needed */
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    z-index: 1; /* Ensure overlay is above the background */
+}
+
+.name {
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin: 0 0 1.4rem;
+}
+
+.desc {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ffffff;
+    /* font-family: Dosis, sans-serif; */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .desc {
+        display: none; /* Hide description on small screens */
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        font-weight: bold;
+    }
+}
+.search_wrapper {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background: #1c1c1c;
+    padding: 0 20px;
+}
+
+.search_content {
+    position: relative;
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    height: 55px;
+    background: #353535;
+    margin: 0 auto;
+    border-radius: 40px;
+    color: #ffffff;
+    /* border: 2px solid green; */
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px; /* Adjust left position as needed */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 24px; /* Adjust size to fit your design */
+    height: 24px; /* Maintain aspect ratio */
+}
+
+.searchMDS{
+
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    right: 0px;
+    top: 14px;
+}
+
+.infocustom {
+    font-size: 28px;
+    position: absolute;
+    left: 0;
+    margin: 8px 0;
+    padding: 0 0 0 50px;
+    border: 0;
+    width: 95%;
+    background: transparent;
+    height: 40px;
+    color: #ffffff;
+    outline: none;
+    /* border: 2px solid green; */
+    
+}
+.infoMDS{
+
+    position: fixed;
+    top: 30px;
+}
+.search_wrapper .searchBar {
+    height: 55px !important;
+    background-color: transparent !important;
+    color: white !important;
+    margin-left: 40px;
+}
+
+
+.searchBar{
+
+    width: 105px; 
+    height: 55px !important;
+    background-color:transparent !important;
+    color: white !important;
+    margin-left: 40px;
+ }
+
+.searchBar:focus-within{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.Input-input{
+    font-size: 20px !important;
+    color: white !important
+}
+.Input-input--regular{
+    height: 55px !important;
+    /* background-color: white !important; */
+}
+.Input{
+    border:none !important; 
+    /* border: white !important; */
+    outline: none !important;
+}
+/*Movie rows*/
+
+.wrapper{
+
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        font-size: 1.5rem;
+    }
+}
+
+.listing__explore{
+    font-size: 1.2rem;
+    color: #353535;
+    letter-spacing: 0.4px;
+}
+a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: #26272b;
+    color: #737373;
+    padding: 10px 20px; /* Reduced padding at the top */
+}
+
+.about-heading {
+    color: white; /* Make "About" text white */
+    font-size: 1rem; /* Larger font size for the heading */
+    margin-top: 5px; /* Added a small margin at the top */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.footer-content {
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 200px; /* Center the content */
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #737373; /* Simple horizontal line */
+    margin: 20px 0; /* Spacing around the line */
+}
+
+.footer-bottom {
+    text-align: left; /* Center the copyright text */
+    margin: 10px 200px; /* Space above the copyright text */
+}
+.text{
+    line-height: 30px !important;
+}
+
+.horLine{
+    width: 80%;
+    /* position: relative;
+    left: 200px; */
+    margin-left: 200px;
+}
+
+
+/*SINGLE MOVIE PAGE*/
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background: #353535;
+    color: #ffffff;
+    margin: 0; 
+    padding: 0; 
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 20px;
+}
+
+.home_link {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+.name{
+    margin: 0 0 1.4rem;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    color: #fff;
+    letter-spacing: 0.4px;
+}
+
+.meta{
+    font-size: 1.4rem;
+}
+.info{
+
+    display: flex;
+    align-items: center;
+}
+.info span{
+    margin-right: 10px;
+}
+
+.rate{
+    display: flex;
+    align-items: center; /* Align the star icon with the text */
+    margin-right: 10px; /* Space between rating and reviews */
+}
+
+.playTrailer{
+
+    background: transparent;
+    color: #ffffff;
+    padding: 5px 10px 10px; /* Adjust padding for smaller button */
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 14px; /* Adjust font size if needed */
+    cursor: pointer;
+    transition: color 0.3s; /* Add transition for hover effect */
+    width: 120px;
+}
+
+i{
+    font-style:italic;
+}
+
+.text-center{
+    text-align: center !important;
+    font-size: 2.5rem;
+    color: #353535;
+    font-weight: 500;
+    margin-top: 70px;
+}
+
+/*MOVIE PAGE*/
+
+.overview-container {
+    display: flex;
+    align-items: center; /* Align items at the start */
+    justify-content: flex-start;
+    margin: 40px 0; /* Space above and below */
+    /* border: 2px solid black; */
+    width: 1260px;
+}
+.main-container{
+
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 200px;
+}
+
+.details li {
+    font-size: 1.5rem; /* Increase text size */
+    margin-bottom: 15px; /* Space between list items */
+}
+
+.details strong {
+    font-weight: bold; /* Ensure the first word is bold */
+}
+
+.poster img {
+    width: 350px; /* Set width */
+    height: 500px; /* Set height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+
+
+/*REVIEWS*/
+
+.review-card {
+    background-color: black; 
+    color: white; 
+    border-radius: 15px; 
+    padding: 20px;
+    margin: 20px; 
+    width: 1260px; 
+    height: auto;
+    overflow: hidden;
+    
+}
+
+
+.review-text {
+    font-size: 1em; 
+    margin: 0; 
+}
+
+/*Actor page*/
+.actors{
+
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+}
+
+.actorImg{
+
+    height: 556px;
+    width: 370px;
+    margin: 30px 120px 30px 0;
+}
+.actorDesc{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 800px;
+    font-size: large;
+    margin-top: 70px;
+}
+
+.indic{
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#navBackground{
+    background-color: rgb(33, 37, 41) !important;
+    color: white !important;
+}
+.color-inverse{
+    color:white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

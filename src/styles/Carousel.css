@@ -1,0 +1,64 @@
+/* src/Carousel.css */
+.carousel {
+    display: flex;
+    width: 1300px;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+    /* justify-content: center;  */
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+    gap: 12px; 
+}
+
+.carousel-cont{
+
+    margin-top: 20px;
+}
+
+.carousel-image {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    border-radius: 20px; /* Optional: for rounded corners */
+    object-fit: cover; /* Maintain image aspect ratio */
+    cursor: pointer;
+}
+
+.left{
+    position: absolute;
+    top: 76px;
+    width: fit-content;
+    right: 0;
+    bottom: 0;
+    left: -60px;
+}
+
+.right{
+    position: absolute;
+    top: 76px;
+    right: -40px;
+    bottom: 0;
+    left: 10;
+}
+.carousel-button {
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1; /* Ensure buttons stay above carousel images */
+    background-color: white; /* Optional: Background color for visibility */
+    border: none; /* Remove default button styling */
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.carousel-button:hover {
+    background-color: #f0f0f0; /* Optional: hover effect */
+}
+
+.carousel-form{
+    display: flex;
+    position: relative;
+
+}
